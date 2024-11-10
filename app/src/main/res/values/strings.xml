@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Assignment_3</string>
+    <string name="next">Next</string>
+    <string name="new_member_register_now">New Member? Register now</string>
+    <string name="password">Password</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="new_member">new member\n</string>
+    <string name="register_now">register now</string>
+    <string name="remember_me">remember me</string>
+    <string name="forget_password">Forget password</string>
+</resources>
