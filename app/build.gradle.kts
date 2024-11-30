@@ -45,6 +45,8 @@ dependencies {
     testImplementation(libs.junit)
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.junit.jupiter)
+    implementation("com.google.android.material:material:1.4.0")
+    implementation(libs.androidx.fragments)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
