@@ -1,29 +1,75 @@
-// Put your package name here. Check your activity for reference.
-package com.example.xyz
+package com.example.assignment_3
 
-class CredentialsManager {
-    fun isEmailValid(email: String) {
+object CredentialsManager {
 
+    private val emailPattern = ("[a-zA-Z0-9\\+\\%\\-\\+]{1,256}" +
+            "\\@" +
+            "[a-zA-Z0-9][0-zA-Z0-9\\-]{0,64}" +
+            "(" +
+            "\\." +
+            "[a-zA-Z0-9][0-zA-Z0-9\\-]{0,25}" +
+            ")+").toRegex()
+
+    private val registeredUsers = mutableMapOf<String, String>()
+
+    fun isEmailValid(email: String): Boolean {
+        return email.matches(emailPattern)
     }
 
-    fun isPasswordValid(password: String): Boolean {
-        // Minimum password length requirement
-        if (password.length < 8) return false
+    fun isEmailAlreadyUsed(email: String): Boolean {
+        return registeredUsers.containsKey(email.lowercase())
+    }
 
-        // Check for at least one uppercase letter
-        if (!password.any { it.isUpperCase() }) return false
+    fun isValidPassword(password: String): Boolean {
+        return password.length >= 8
+    }
 
-        // Check for at least one lowercase letter
-        if (!password.any { it.isLowerCase() }) return false
-
-        // Check for at least one digit
-        if (!password.any { it.isDigit() }) return false
-
-        // Check for at least one special character
-        if (!password.any { !it.isLetterOrDigit() }) return false
-
-        // If all conditions are met, return true
+    fun registerUser(email: String, password: String): Boolean {
+        if (isEmailAlreadyUsed(email)) {
+            return false
+        }
+        registeredUsers[email.lowercase()] = password
         return true
     }
 
+    fun validateLogin(email: String, password: String): Boolean {
+        return registeredUsers[email.lowercase()] == password
+    }
+
+    fun validateCredentials(email: String, password: String): Boolean {
+        return isEmailValid(email) && isValidPassword(password)
+    }
+
+    fun isValidFullName(fullName: String): Boolean {
+        return fullName.isNotEmpty()
+    }
+
+    fun isHardcodedCredentials(email: String, password: String): Boolean {
+        val hardcodedEmail = "test@te.st"
+        val hardcodedPassword = "1234"
+        return email == hardcodedEmail && password == hardcodedPassword
+    }
+
+    fun isValidPhoneNumber(phoneNumber: String): Boolean {
+        val phonePattern = "^[0-9]{9,}$".toRegex()
+        return phoneNumber.matches(phonePattern)
+    }
+
+    fun isTermsAccepted(isChecked: Boolean): Boolean {
+        return isChecked
+    }
+
+    fun validateCredentialsForSignUp(
+        fullName: String,
+        email: String,
+        phoneNumber: String,
+        password: String,
+        isTermsAccepted: Boolean
+    ): Boolean {
+        return isValidFullName(fullName) &&
+                isEmailValid(email) &&
+                isValidPhoneNumber(phoneNumber) &&
+                isValidPassword(password) &&
+                isTermsAccepted(isTermsAccepted)
+    }
 }
