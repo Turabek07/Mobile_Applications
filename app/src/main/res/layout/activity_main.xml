@@ -2,11 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".MainActivity">
+=======
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    xsi:schemaLocation="http://schemas.android.com/apk/res/android ">
+>>>>>>> 19d1db464bcd4227bc0ef006438b9cd0ebe96497
 
     <TextView
         android:id="@+id/tvHelloWorld"
