@@ -1,4 +1,4 @@
-// Put your package name here. Check your activity for reference.
+
 package com.example.assignment_3
 
 object CredentialsManager {
