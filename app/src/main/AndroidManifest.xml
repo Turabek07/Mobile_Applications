@@ -12,9 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment_3"
         tools:targetApi="31">
+
         <activity
             android:name=".CreateAccountActivity"
+<<<<<<< HEAD
             android:exported="true" >
+=======
+            android:exported="true">
+>>>>>>> e12131f2515c5bf9f8b31e30732fba53dcdf42c0
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,6 +27,7 @@
             </intent-filter>
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".SignUpActivity"
             android:exported="true">
         </activity>
@@ -29,6 +35,13 @@
             android:name=".MainActivity"
             android:exported="true">
         </activity>
+=======
+            android:name=".SignUpDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+>>>>>>> e12131f2515c5bf9f8b31e30732fba53dcdf42c0
     </application>
 
 </manifest>
