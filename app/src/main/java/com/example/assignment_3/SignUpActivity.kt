@@ -44,12 +44,12 @@ class SignUpActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
+        setContentView(R.layout.fragment_sign_up_page)
 
         nextButton.setOnClickListener { handleNextButtonClick() }
         val loginButton = findViewById<TextView>(R.id.tvRegisterNow)
         loginButton.setOnClickListener {
-            val goToCreateAccount = Intent(this, CreateAccountActivity::class.java)
+            val goToCreateAccount = Intent(this, CreateAccountFragment::class.java)
             startActivity(goToCreateAccount)
         }
     }
@@ -108,7 +108,7 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun navigateToLogin() {
-        val intent = Intent(this, CreateAccountActivity::class.java)
+        val intent = Intent(this, CreateAccountFragment::class.java)
         startActivity(intent)
         finish()
     }
