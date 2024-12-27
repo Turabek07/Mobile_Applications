@@ -17,4 +17,8 @@
     <string name="change_fragment">Change fragment</string>
     <string name="fragment_a">Fragment A</string>
     <string name="fragment_b">Fragment B</string>
+    <string name="logout">Logout</string>
+    <string name="recipe_image">Recipe Image</string>
+    <string name="recipe_title">Recipe Title</string>
+    <string name="recipe_details">Recipe Details</string>
 </resources>
