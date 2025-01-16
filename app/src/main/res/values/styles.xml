@@ -18,6 +18,10 @@
     <style name="SubtitleText">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">15sp</item>
+<<<<<<< HEAD
+        <item name="android:layout_marginTop">4dp</item>
+=======
+>>>>>>> e12131f2515c5bf9f8b31e30732fba53dcdf42c0
     </style>
 
     <style name="SmallLinkText">
@@ -47,4 +51,8 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+<<<<<<< HEAD
 </resources>
+=======
+</resources>
+>>>>>>> e12131f2515c5bf9f8b31e30732fba53dcdf42c0
